@@ -1,0 +1,32 @@
+{% extends '../community/base.html' %} 
+
+{% block title %}  Sign Up   {% endblock %} 
+
+
+{% block content %}
+
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-xs-12 col-md-4 card login-card">
+      <h5 class="small-heading">Register with CIIE</h5>
+      <br> {% include 'global_components/django_messages.html' %}
+
+      <form action="{% url 'signup' %}" method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{ user_form.as_p }} 
+        {{ profile_form.as_p }}
+        <br>
+        <button class="btn btn-block btn-wire-dark-simple">Submit</button>
+      </form>
+      <br>
+      <p>Already have an account. <a href="{% url 'login' %}">Sign in.</a></p>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+{% endblock %}

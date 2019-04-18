@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!---jQuery and Popper.js-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+  <!---Bootstrap’s compiled CSS and JS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href="register.css" rel="stylesheet" type="text/css">
+  <script src="main.js"></script>
+
+  <style>
+  body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('{% static "userprofiles/re.jpg" %}');
+  }
+
+  .form_bg{
+   width:500px;
+   height: 450px;
+ }
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-custom navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header">
+       
+       <img class="navbar-header img-responsive" src="" alt="Food High">
+       
+     </div>
+     <ul class="nav navbar-nav navbar-right">
+      <!-- <li><a href="#Food_delivery_menu">Food Delivery</a></li>  -->
+      <!-- <li><a href="#photo-gallery">Photo gallery</a></li>  -->
+      <!-- <li><a href="#how_it_works">How it works</a></li>  -->
+      <!-- <li><a href="#our_cities">Our Cities</a></li> -->
+
+      
+      <li><a href="#aboutUs">About us</a></li>
+      <li><a href="#nuStartupStory">NU Startup Story</a></li>
+      <li><a href="#archives">Archives</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="signup.html">SignUp</a></li>
+      
+    </ul>      
+  </div>
+</nav>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="form_bg">
+      <form action="loginregister">
+       <h2 class="text-center" style="color:white">Register</h2>
+       <br/>
+       <div class="form-group">
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"/>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"/>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email Id"/>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="pass" name="pass" placeholder="Password"/>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter Password"/>
+      </div>
+      <br/>
+      <div class="align-center">
+       
+       <a  href="login.html"><button type="button" class="btn btn-dark" value="Register" name="register" style="color:black">Register</button></a>
+       
+       <a class="space" href="login.html" style="color:white">Already a User? Sign in</a>
+     </div>
+   </form>
+ </div>
+</div>
+</div>
+</html>

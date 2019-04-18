@@ -1,0 +1,139 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>User Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!---jQuery and Popper.js-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <!---Bootstrap’s compiled CSS and JS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href="{% static 'userprofiles/register.css' %}" rel="stylesheet" type="text/css">
+  <script src="{% static 'userprofiles/main.js' %}"></script>
+
+  <style>
+  body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('{% static "userprofiles/re.jpg" %}');
+  }
+
+  .form_bg{
+   width:500px;
+   height: 450px;
+ }
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-custom navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header">
+
+       <img class="navbar-header img-responsive" src="{% static 'userprofiles/ciie_logo.png' %}" alt="CIIE logo">
+
+     </div>
+     <ul class="nav navbar-nav navbar-right">
+        {% if user.is_superuser %}
+       <li><a href="{% url 'index' %}">Home</a></li>
+       <li><a href="{% url 'change_password' %}">Update Password</a></li>
+       {% else %}
+       <li><a href="{% url 'index' %}">Home</a></li>
+       <li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>
+       <li><a href="{% url 'change_password' %}">Update Password</a></li>
+       {% endif %}
+       {% if user.is_authenticated %}
+       <li><a href="{% url 'logout' %}">Logout</a></li>
+       {% endif %}
+
+     </ul>      
+   </div>
+ </nav>
+
+
+ <div class="sub">
+   <p class="sub">
+    <h1>Welcome {{userp.name}}</h1>
+    <ul>
+      <li>Currently logged in as {{userp.user.username}}</li>
+    </ul>
+
+    {% if user.is_authenticated %}
+
+    {% if not userp.email_activated %}
+
+    <div style="text-align: center;" class="alert alert-warning" role="alert">
+
+      Please verify your email address.
+
+      <a href="{% url 'send_activation_email' %}"><button class="btn btn-primary">Verify</button></a>
+
+    </div>
+
+    {% endif %}
+
+    {% endif %}
+  </p>
+</div>
+
+
+
+<div class="sub">
+  <p class="sub">
+
+    {% if user.is_superuser %}
+
+
+    <h2> All Events </h2>
+    <ul>
+     {% for event in events%}
+
+     <li><a href="{% url 'viewEvent' event.id %}">{{event}}</a></li>
+
+     {% empty %}
+     <li>No Events to display.</li>
+
+     {% endfor %}  
+   </ul>
+   <br>
+ </p>
+</div>
+<div class="sub">
+  <p class="sub">
+    {% else %}
+
+    <h2> All Events </h2>
+    <ul>
+     {% for event in events%}
+
+     <li><a href="{% url 'viewEvent' event.id %}">{{event}}</a></li>
+     {% empty %}
+     <li>No Events to display.</li>
+
+     {% endfor %}  
+   </ul>
+
+   <h2>Events You are Registered in</h2> 
+
+   <ul>
+    {% for event in registered_events %}
+    <li><a href="{% url 'viewEvent' event.id %}">{{event}}</a></li>
+    {% empty %}
+    <li>You are not registered in any event.</li>
+
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if request.user.is_superuser %}
+
+  <a href="{% url 'eventList' %}">Show Events with the list of registered users</a>
+  {% endif %}
+
+</p>
+</div>
+
+</html>

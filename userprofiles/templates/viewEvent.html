@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block title %}
+
+Event {{anEvent.title}}
+
+{% endblock %}
+
+{% block head %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!---Bootstrap’s compiled CSS and JS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="{% static 'userprofiles/register.css' %}" rel="stylesheet" type="text/css">
+<script src="{% static 'userprofiles/main.js' %}"></script>
+
+<style>
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url({% static 'userprofiles/picA1.jpg' %});
+}
+
+.form_bg{
+  width:500px;
+  height: 450px;
+}
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+
+      <img class="navbar-header img-responsive" src="{% static 'userprofiles/ciie_logo.png' %}" alt="CIIE logo">
+
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_superuser %}
+        <li><a href="{% url 'userDash' %}">Back to Dashboard</a></li>
+        {% else %}
+        <li><a href="{% url 'register' anEvent.id %}">Register</a></li>
+        <li><a href="{% url 'unregister' anEvent.id %}">Unregister</a></li>
+        <li><a href="{% url 'userDash' %}">Back to Dashboard</a></li>
+        {% endif %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+
+
+      </ul>  
+    </div>    
+  </div>
+</nav>
+
+<br><br><br>
+
+<div class="briefIntro">
+  <h1>Event {{anEvent.title}}</h1>
+</div>
+<div class="briefIntro">
+  <ul>
+    <br>Date: {{anEvent.event_date}}<br>
+    <br>Venue: {{anEvent.venue}}<br>
+    <br>Time: {{anEvent.time}}<br>
+    <br>Description: {{anEvent.content}}<br>
+  </ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Event List
+{% endblock  %}
+
+
+{% block body %}
+
+<div>
+	
+	<ul>
+		
+		{% for event in events %}
+		<li>
+			<a href="{% url 'eventUsers' event.id %}">{{event}}</a>
+		</li>
+		{% empty %}
+		<li>
+			No Events to display!
+		</li>
+		{% endfor %}
+	</ul>
+
+	<a href="{% url 'userDash' %}">Dashboard</a>
+</div>
+
+
+{% endblock %}

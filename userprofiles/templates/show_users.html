@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Users
+{% endblock %}
+
+
+
+{% block body %}
+
+<div>
+	<h1>Users Registered in {{event.title}}</h1>
+
+	<ul>
+		{% for user in users %}
+		<li>
+			{{user}} - {{user.name}} - {{user.email}} - {{user.phone_number}} - {{user.course}}
+		</li>
+		{% empty %}
+		<li>
+			No users registered for {{event.title}}
+		</li>
+		Total number of registrations: {{ forloop.counter }}
+		{% endfor %}
+
+	</ul>
+	
+	<a href="{% url 'eventList' %}">Back to event list</a><br>
+	<a href="{% url 'userDash' %}">Dashboard</a>
+</div>
+
+{% endblock %}

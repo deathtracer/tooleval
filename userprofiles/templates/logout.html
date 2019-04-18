@@ -1,0 +1,20 @@
+
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+
+Logout
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+<h1>{{message}}</h1>
+<a href="{% url 'login' %}">Back to login</a>
+{% endblock %}

@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+ margin: 0;
+padding: 0;
+}
+
+
+html, body { overflow-x: hidden; }
+
+
+/*************************************************************************/
+/*                             Navbar Start                              */
+/*************************************************************************/
+
+.navbar-custom li a{
+	color: white;
+}
+
+.navbar-fixed-top.scrolled {
+   background: #0D0D0D; 
+  transition: all 0.5s ease-in;
+}
+
+.navbar-custom {
+	position: absolute;
+	top:0;
+	 
+	background: none;
+	position: fixed;
+}
+
+.navbar-brand a {
+	text-decoration: none
+}
+
+.nav{
+    margin-top: 1.5%;
+}
+
+.nav li a {
+	font-size: 19px;  
+}
+
+.nav li a:hover{
+	background: white;
+	color: black;
+}
+/*************************************************************************/
+/*                              Navbar End                               */
+/*************************************************************************/
+/*                            Header Start                               */
+/*************************************************************************/
+
+header{
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url( re.jpg);
+	height: 100vh;
+	width:100%; 
+	/*Parallax Effect*/
+	background-size: cover; 
+	background-attachment: fixed; 
+	background-position: center; 
+	background-repeat: no-repeat; 
+	/*Text Center*/
+	padding: 260px 50px;
+	color: white
+}
+		
+header h1{
+	font-size: 45px
+}
+
+ /*Logo*/
+.img-responsive{
+	height: 80px;
+	width: 80px;
+}
+
+/*Buttons*/
+.buttons{
+	margin-top: 30px
+}
+
+.btn{
+	border: 1px solid white;
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 25px;
+	font-size: 18px;
+}
+
+.btn-half, .btn-full{
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.btn-half:hover,.btn-full:hover{
+	background: white;
+	color: black;
+	transition: all 0.5s ease-in;
+}
+/*************************************************************************/
+/*                            Header End                                 */
+/*************************************************************************/
+
+
+.copy{
+	width:80%;
+	margin-left:15%;
+	margin-bottom:40px;
+	font-size: 25px;
+}
+
+h3:after{
+	width:100px;
+	height:2px;
+	background: red;
+	display:block;
+	content: " " ;
+	margin: 0 auto;
+	margin-top:30px;
+	
+}
+
+#getHeader{
+	width:100%;
+	height:100px;
+}
+
+#aboutUs{
+	width:100%;
+	height:100px;
+}
+#team{
+	width:100%;
+	height:100px;
+}
+#contact{
+	width:100%;
+	height:100px;
+}
+
+#archives{
+	width:100%;
+	height:100px;
+}
+
+.features h3{
+	
+	margin-bottom:40px;
+	color: black;
+}
+
+.arranging{
+	text-align:justify;
+}
+
+.features h4{
+	margin-left:50px;
+}
+
+#photo-gallery{
+	width:100%;
+	height:150px;
+}
+
+.photo-showcase{
+	list-style:none;
+	width:100%;
+	
+}
+
+.photo-showcase li{
+	display:block;
+	width:25%;
+	float:left;
+}
+
+.meal-photo{
+	width:100%;
+	margin:0;
+	overflow:hidden;
+}
+
+.meal-photo img{
+	width:100%;
+	height:auto;
+	transform: scale(1);
+	transition: all 0.5s ease-in ;
+}
+
+.meal-photo img:hover{
+		
+	transform: scale(1.5);
+}
+
+
+
+#nuStartupStory{
+	width:100%;
+	height:100px;
+}
+
+.pic img{
+	width:60%;
+	margin-left:30%;
+	margin-top:10px;
+}
+
+.work-steps{
+	margin-top:20px;
+}
+
+.work-steps p{
+	margin-top:10px;
+}
+
+.work-steps div{
+	border: 1px solid black;
+	display: inline-block;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+}
+
+.clearfix{
+	zoom:1;
+}
+
+.clearfix:after{
+	visibility: hidden;
+	content: ".";
+	height:0;
+	display:block;
+	clear:both;
+}
+
+#photoGalary{
+	width:100%;
+	height:120px;
+}
+
+
+.photoGalary img{
+	width:100%;
+	margin-top:30px;
+	height:180px;
+}
+
+.team{
+	margin-top:80px;
+	background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+	padding-top:25px; 
+	padding-bottom:25px;
+	color:white;
+	background-attachment: fixed;
+	background-repeat: no repeat;
+	background-position: center;
+}
+
+.team .space{
+	padding-top:20px;
+}
+
+.team p{
+	text-align: justify;
+	color:white;
+	line-height:25px;
+	margin-bottom:20px;	
+}
+
+.team cite img{
+	width:150px;
+	height:auto;
+    margin-bottom:20px;	
+}
+
+.customer_name p{
+  text-align:center;
+}
+
+.img-center{
+	margin: 0 auto;
+}
+
+.button{
+	margin-top: 20px;
+}
+
+.btn2{
+	border: 1px solid black;
+	text-decoration: none;
+	color: black;
+	padding: 5px 20px;
+	border-radius: 20px;
+	font-size: 15px;
+	
+}
+
+.btn2-full{
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.btn2-full:hover{
+	background:black;
+	color: white;
+	transition: all 0.5s ease-in;
+	text-decoration:none;
+}
+
+.form{
+	margin-top:80px;
+}
+
+.form .container{
+	padding-top:30px;
+}
+
+.footer{
+	color:white;
+	font-size:15px;
+	background: #0D0D0D;
+}

@@ -1,0 +1,452 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home | CIIE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!---jQuery and Popper.js-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<!---Bootstrap’s compiled CSS and JS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="{% static 'userprofiles/main.css' %}" rel="stylesheet" type="text/css">
+
+	<script src="{% static 'userprofiles/main.js' %}"></script>
+</head>
+
+<body>
+	<!--------------------------------------------------------------------------------->
+	<!--                       Navigation Bar Starts                                 -->
+	<!--------------------------------------------------------------------------------->
+	<nav class="navbar navbar-custom navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				
+				<img class="navbar-header img-responsive" src="{% static 'userprofiles/ciie_logo.png' %}" alt="CIIE logo">
+				
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				
+				
+				<li><a href="#aboutUs">About us</a></li>
+				<li><a href="#nuStartupStory">NU Startup Story</a></li>
+				<li><a href="#archives">Archives</a></li>
+				<li><a href="#team">Team</a></li>
+				<li><a href="#contact">Contact</a></li>
+				{% if user.is_authenticated %}
+				<li><a href="{% url 'userDash' %}">Dashboard</a></li>
+				<li><a href="{% url 'logout' %}">Logout</a></li>
+				{% else %}
+				<li><a href="{% url 'login' %}">Login</a></li>
+				<li><a href="{% url 'signup' %}">SignUp</a></li>	   
+				{% endif %}
+				
+			</ul>		
+		</div>
+	</nav>
+	<!--------------------------------------------------------------------------------->
+	<!--                         Navigation Bar Ends                                 -->
+	<!--------------------------------------------------------------------------------->
+	<!--                               Header Starts                                 -->
+	<!--------------------------------------------------------------------------------->
+	<header>
+		<div class="text-center">
+			<h1 class="text-center" >Center for Innovation Incubation and Entrepreneurship </h1>
+			<div class="lead">NIIT University, Neemrana</div>
+			<div class="buttons">
+				<a href="https://www.niituniversity.in" class="btn btn-half">Take a look at the University</a>
+				<a href="https://moodle.niituniversity.in" class="btn btn-full">Already a NUton?</a>
+			</div>
+		</div>
+	</header>
+	<!--------------------------------------------------------------------------------->
+	<!--                               Header Ends                                   -->
+	<!--------------------------------------------------------------------------------->
+	<!--                             Content starts                                  -->
+	<!--------------------------------------------------------------------------------->
+	
+	<section>
+		<div id="aboutUs"></div>
+		<div class="features">
+			<h3 class="text-center">Who we are?</h3>
+			<div class="copy">
+				<p>IIM Ahmedabad's Centre for Innovation Incubation and Entrepreneurship (CIIE) is one of India's leading centres catalyzing the entrepreneurship ecosystem in the country through its various interventions and initiatives. CIIE was set-up by IIM Ahmedabad in association with the Government of India and the Gujarat Government to provide seeding and incubation support with a focus on technology and mass impact areas. Since 2007, CIIE has accelerated over 500 startups across various sectors. CIIE's journey so far has had enormous contributions from IIMA alumni who have come forward and supported the cause in multiple ways.</p>
+			</div>
+			<h3 class="text-center">What we do?</h3>
+			
+			<div class="copy">
+				We deliver disproportionate impact to entrepreneurship in India by backing purpose-driven entrepreneurs harnessing the power of technology to solve some of India's toughest problems using business models that are specific to India.
+
+				<p>We provide entrepreneurs with the three critical enablers to fast-track their journey from ideas into viable businesses creating positive sustainable impact.
+				</p>
+				
+				
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<section>
+	<div id="nuStartupStory"></div>
+	<div id="how_it_works"></div>
+	<h3 class="text-center">Czar securities</h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="pic">
+					<img src="{% static 'userprofiles/czar.jpg' %}">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="work-steps">
+					
+					<p> TCzar Securities is a global leader in Web Application Security. We are building an ecosystem of products and services to make information security more accessible and easy-to-use. Excellent relationships with our clients have helped us grow many fold.</p>
+					<p> We take pride in being associated with top companies in their domains. Our success can be attributed to our hard working and customer centric team. With our top notch team and faith our customers in us we are on our way to revolutionize cyber security industry.</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="nuStartupStory"></div>
+	<div id="how_it_works"></div>
+	<h3 class="text-center">Medwel</h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="pic">
+					<img src="{% static 'userprofiles/medwel.jpg' %}">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="work-steps">
+					
+					<p> Medwel specializes in medical area where it serves people through its app.</p>
+				<p> Happy to announce that Medwle a startup by NU students Rakshith Reddy, Avinash Reddy and Siddhartha Kille has been selected for final stage in the startup competition at Istanbul. </p>
+				
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="how_it_works"></div>
+<h3 class="text-center">Peer Xp</h3>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="pic">
+				<img src="{% static 'userprofiles/peerxp.jpg' %}">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="work-steps">
+				
+				<p> PeerXP Technologies designs business management tools for Government organizations. It also builds softwares in the domains of E-Learning and Enterprise Management.</p>
+				<p> Products: Anvesh – Business Management system, E-learning portals, and Enterprise Development Portals</p>
+				<p>At PeerXP, we believe most SaaS companies (or others running software in the cloud) want to optimize and fasten their product development cycle. In order to do that they also need great infrastructure and development environment but most companies do not want to be (or do not have the time to be) great at both their product and infrastructure environments. Therefore PeerXP offers #PWSLAB  to build the processes and tools for your engineers to be successful. </p>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div id="how_it_works"></div>
+<h3 class="text-center">At Lead</h3>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="pic">
+				<img src="{% static 'userprofiles/atif.jpg' %}">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="work-steps">
+				
+				<p> Atif, who was also of 2012-16 batch developd a robot working in embedded system area and participated into Silicon Di Art, insoired into secuiry and embeded systems,project in 6th sem, in embedded system app. In GIS area, developed a drone, in B.tech went to Delhi police and gave demo of product, received appreciation from all., founded Atlead in B.tech, then Atlead,,, also has presence in foreign, got land from Raj Govt </p>
+				<p> Company has  international contracts with Japan, China, Indonesia, Canada, South Africa, Germany, Malaysia and India.</p>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+
+<!-----------------------------------ARCHIVES---------------------------------------------->
+
+
+<section>
+	<div id="archives"></div>
+	<div class="features">
+		<h3 class="text-center">Archives</h3>
+		
+		<p class="copy">
+			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
+			literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+			College in Virginia, looked up one of the more obscure Latin words, consectetur, from.
+		</p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<span class="glyphicon glyphicon-bookmark"></span>
+				<h4>Have Healthy Food</h4>
+				<p class="arranging">
+					The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 
+					and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+					accompanied by English versions from the 1914 translation.
+				</p>
+			</div>
+			<div class="col-md-3">
+				<span class="glyphicon glyphicon-asterisk"></span>
+				<h4
+				>Have Healthy Food</h4>
+				<p class="arranging">
+					The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 
+					and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+					accompanied by English versions from the 1914 translation.
+				</p>
+			</div>
+			<div class="col-md-3">
+				<span class="glyphicon glyphicon-globe"></span>
+				<h4>Have Healthy Food</h4>
+				<p class="arranging" >
+					The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 
+					and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+					accompanied by English versions from the 1914 translation.
+				</p>
+			</div>
+			<div class="col-md-3">
+				<span class="glyphicon glyphicon-camera"></span>
+				<h4>Have Healthy Food</h4>
+				<p class="arranging">
+					The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 
+					and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+					accompanied by English versions from the 1914 translation.
+				</p>
+				</section>
+
+				<!------------------------------------PHOTO GALARY--------------------------------------------->
+
+				<section class="photoGalary">
+					<div id="photoGalary"></div>
+					<h3 class="text-center">Some Insights to Our Events</h3>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<figure class="meal-photo">
+									<img src="{% static 'userprofiles/1b.jpg' %}">
+								</figure>
+								<h4>Nu annual Day</h4>
+								<p><span class="glyphicon glyphicon-asterisk"></span>Karan Singh</p>
+							</div>
+							<div class="col-md-3">
+								<figure class="meal-photo">
+									<img src="{% static 'userprofiles/2b.jpg' %}">
+								</figure>
+								<h4>Session on GST</h4>
+								<p><span class="glyphicon glyphicon-asterisk"></span> Dr Gurrendra Bhardwaj</p>
+							</div>
+							<div class="col-md-3">
+								<figure class="meal-photo">
+									<img src="{% static 'userprofiles/3b.jpg' %}">
+								</figure>
+								<h4>Interaction of Chief Guest Dr. K Kasturirangan </h4>
+								<p><span class="glyphicon glyphicon-asterisk"></span> Dr. K Kasturirangan</p>
+							</div>
+							<div class="col-md-3">
+								<figure class="meal-photo">
+									<img src="{% static 'userprofiles/4b.jpg' %}">
+								</figure>
+								<h4>Google Interaction</h4>
+								<p><span class="glyphicon glyphicon-asterisk"></span> Rajan Anandan</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<!-----------------------------------------EVENTS---------------------------------------->
+
+				
+			
+
+
+
+
+
+			<section class="team">
+				<div id="team"></div>
+				<h3 class="text-center">Team</h3>
+				<div class="container space">
+					<div class="row">
+						<div class="col-md-4">
+							<blockquote>
+								<p>CIIE Faculty Coordinator
+								</p>
+								<cite><img class="img-responsive img-center" alt="photo here" src="{% static 'userprofiles/vu.jpg' %}"></cite>
+								<div class="customer_name">
+									<p>Vikas Upadhyaya</p>
+								</div>
+							</blockquote>
+						</div>
+						<div class="col-md-4">
+							<blockquote>
+								<p>CIIE Student Coordinator
+								</p>
+								<cite><img class="img-responsive img-center" src="{% static 'userprofiles/moksh.jpg' %}"></cite>
+								<div class="customer_name">
+									<p>Moksh Gupta</p>
+								</div>
+							</blockquote>
+						</div>
+						<div class="col-md-4">
+							<blockquote>
+								<p>CIIE Student Coordinator
+								</p>
+								<cite><img class="img-responsive img-center" src="{% static 'userprofiles/ankit.jpg' %}"></cite>
+								<div class="customer_name">
+									<p>Ankit Gupta</p>
+								</div>
+							</blockquote>
+						</div> 
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+			<section>
+				<div id="contact"></div>
+				<div class="features">
+					<h3 class="text-center">Contact Us</h3>
+					
+					<p class="copy">
+						Email us at CIIE@niituniversity.in
+					</p>
+				</div>
+				
+			</section>
+
+
+
+
+
+			
+
+
+
+
+			
+			
+			<!--------------------------------------------------------------------------------->
+			<!--                               Content ends                                  -->
+			<!--------------------------------------------------------------------------------->
+			<!--                         Photo Gallery Starts                                -->
+			<!--------------------------------------------------------------------------------->
+			
+			<section class="photo-gallery">
+				<div id="photo-gallery"></div>
+				<ul class="photo-showcase clearfix">
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/1a.jpg' %}">
+						</figure>
+					</li>
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/2a.jpg' %}">
+						</figure>
+					</li>
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/3a.jpg' %}">
+						</figure>
+					</li>
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/4a.jpg' %}">
+						</figure>
+					</li>
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/5a.jpg' %}">
+						</figure>
+					</li>
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/medwel.jpg' %}">
+						</figure>
+					</li>
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/peerxp.jpg' %}">
+						</figure>
+					</li>
+					<li>
+						<figure class="meal-photo">
+							<img class="img-responsive" src="{% static 'userprofiles/czar.jpg' %}">
+						</figure>
+					</li>
+				</ul>
+			</section>
+			<!--------------------------------------------------------------------------------->
+			<!--                           Photo Gallery Ends                                -->
+			<!--------------------------------------------------------------------------------->
+			<!--               HOW IT WORKS AS SIMPLE AS 1 2 3 Starts                        -->
+			<!--------------------------------------------------------------------------------->
+			
+			<!--------------------------------------------------------------------------------->
+			<!--                HOW IT WORKS AS SIMPLE AS 1 2 3 Ends                         -->
+			<!--------------------------------------------------------------------------------->
+			<!--                               Cities Starts                                 -->
+			<!--------------------------------------------------------------------------------->
+			
+			<!--------------------------------------------------------------------------------->
+			<!--                                Cities Ends                                  -->
+			<!--------------------------------------------------------------------------------->
+			<!--                            Testimonials Starts                              -->
+			<!--------------------------------------------------------------------------------->
+			
+			<!--------------------------------------------------------------------------------->
+			<!--                            Testimonials Ends                                -->
+			<!--------------------------------------------------------------------------------->
+
+			<!--------------------------------------------------------------------------------->
+			<!--                              Footer Starts                                  -->
+			<!--------------------------------------------------------------------------------->
+			<section class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<br>
+							<p>All rights reserved.</p>
+						</div>
+						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--------------------------------------------------------------------------------->
+			<!--                              Footer Ends                                    -->
+			<!--------------------------------------------------------------------------------->
+		</body>
+		</html>
