@@ -7,7 +7,7 @@ coverage==4.5.2
 cssselect==1.0.3
 cssutils==1.0.2
 cloudinary==1.14.0
-Django==2.0.12
+Django==2.2.10
 django-appconf==1.0.2
 django-ckeditor==5.6.1
 django-imagekit==4.0.2
