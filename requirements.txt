@@ -41,7 +41,7 @@ Pillow==5.3.0
 premailer==3.2.0
 pycodestyle==2.4.0
 pyflakes==2.0.0
-Pygments==2.2.0
+Pygments==2.7.4
 pytz==2018.7
 psycopg2-binary>=2.7,<3.0
 radon==2.4.0
