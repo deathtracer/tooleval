@@ -37,7 +37,7 @@ pathspec==0.5.5
 pbr==5.1.1
 phonenumbers==8.10.0
 pilkit==2.0
-Pillow==5.3.0
+Pillow==9.0.1
 premailer==3.2.0
 pycodestyle==2.4.0
 pyflakes==2.0.0
